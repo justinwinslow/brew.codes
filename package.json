@@ -6,6 +6,7 @@
     "bower": "",
     "express": "",
     "requirejs": "",
-    "stylus": ""
+    "stylus": "",
+    "nib": "latest"
   }
 }

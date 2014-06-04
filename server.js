@@ -1,5 +1,6 @@
 var express = require('express'),
 	stylus = require('stylus'),
+      nib = require('nib'),
 	app = express();
 
 var db = {
@@ -14,9 +15,22 @@ var db = {
   }
 };
 
+// Custom compile configuration for Stylus
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .set('compress', false)
+    .set('include css', true)
+    .define('url', stylus.url({
+      limit: 60000
+    }))
+    .use(nib());
+}
+
 app.use(stylus.middleware({
   debug: true,
-  src: __dirname
+  src: __dirname + '/public',
+  compile: compile
 }));
 
 app.use(express.static(__dirname + '/public'));

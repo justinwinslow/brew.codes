@@ -3,11 +3,12 @@
   "description": "JWin's Boilerplate",
   "version": "0.1.0",
   "dependencies": {
-    "lodash": null,
-    "jquery": null,
-    "ember": null,
-    "text": null,
-    "handlebars": null,
-    "requirejs": null
+    "normalize.css": "latest",
+    "lodash":   "latest",
+    "jquery":   "latest",
+    "ember":   "latest",
+    "text":   "latest",
+    "handlebars":   "latest",
+    "requirejs":   "latest"
   }
 }
